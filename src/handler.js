@@ -1,34 +1,33 @@
 'use strict';
 
 var http = require('https');
-var config = require('./config');
 
 function sendToSlack(event){
 
   var timestamp = new Date(event.event_timestamp).getTime();
 
   var message = JSON.stringify({
-    channel: "#" + process.env.SLACK_CHANNEL,
-    username: "onelogin",
-    response_type: "in_channel",
+    channel: '#' + process.env.SLACK_CHANNEL,
+    username: 'onelogin',
+    response_type: 'in_channel',
     attachments: [{
-      color: "#ff0000",
-      text: event.user_name + " had a risky login to OneLogin",
+      color: '#ff0000',
+      text: event.user_name + ' had a risky login to OneLogin',
       ts: timestamp,
       fields: [
         {
-          title: "Risk Score",
-          value: event.risk_score + " / 100",
+          title: 'Risk Score',
+          value: event.risk_score + ' / 100',
           short: false
         },
         {
-          title: "Risk Reasons",
+          title: 'Risk Reasons',
           value: event.risk_reasons,
           short: false,
           mrkdwn: false
         },
         {
-          title: "Notes",
+          title: 'Notes',
           value: event.notes,
           short: false,
           mrkdwn: false
