@@ -4,7 +4,7 @@ var http = require('https');
 
 function sendToSlack(event){
 
-  var timestamp = new Date(event.event_timestamp).getTime();
+  var timestamp = new Date(event.event_timestamp).getTime() / 1000;
 
   var message = JSON.stringify({
     channel: '#' + process.env.SLACK_CHANNEL,
