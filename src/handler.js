@@ -6,6 +6,13 @@ function sendToSlack(event){
 
   var timestamp = new Date(event.event_timestamp).getTime() / 1000;
 
+  var maxScore = 100
+
+  if (event.risk_score > 100) {
+    var maxScore = event.risk_score
+  }
+
+
   var message = JSON.stringify({
     channel: '#' + process.env.SLACK_CHANNEL,
     username: 'onelogin',
@@ -17,7 +24,7 @@ function sendToSlack(event){
       fields: [
         {
           title: 'Risk Score',
-          value: event.risk_score + ' / 100',
+          value: event.risk_score + ' / ' + maxScore,
           short: false
         },
         {
