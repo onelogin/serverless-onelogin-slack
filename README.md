@@ -10,7 +10,7 @@ To run this sample you will need an AWS account setup with credentials saved tha
 
 ### Slack
 You will also need a Slack account with an Incoming Webhook setup. You can [add one to your Slack account here](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks). Once you have your Incoming Webhook setup grab the Webhook Url that they issue you.
-e.g. Something like this `https://hooks.slack.com/services/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`
+e.g. Something like this `https://hooks.slack.com/services/xxxxxxxxxxx/xxxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxx`
 
 ### Serverless
 Then you need to have [Serverless](https://serverless.com/) installed on your local machine. It takes a couple of seconds/minutes to setup. [Follow these instructions to get started](https://serverless.com/framework/docs/getting-started/).
