@@ -27,7 +27,7 @@ provider:
     RISK_THRESHOLD: 4
     # Change the Slack path to the one Slack issued you when
     # you created an incoming webhook
-    SLACK_PATH: /services/T169K11K4/B8BBEVD42/b2A9HBldz0dZWLQAJetuj5tC
+    SLACK_PATH: /services/xxxxxxxxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxxx
     # Change this to the name of the Slack channel that
     # you want to post these notifications to
     SLACK_CHANNEL: onelogin
